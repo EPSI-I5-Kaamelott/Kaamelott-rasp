@@ -1,0 +1,14 @@
+{
+  "name": "Kaamelott-rasp",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": {
+    "url": "git@github.com:EPSI-I5-Kaamelott/Kaamelott-rasp.git",
+    "type": "git"
+  },
+  "author": "EPSI-I5-Kaamelott",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^1.7.2"
+  }
+}
