@@ -1,11 +1,25 @@
-module.exports = () => {
-  const start_quiz = () => {
-    
-  };
+const display = require('./helpers/display');
+const player = require('./helpers/player');
 
-  const end_quiz = (winner, score) => {
-    
-  };
+module.exports = {
+  connect: () => {
+    console.log('Connected to the server.');
+    player.connect();
+    display.connect();
+  },
 
-  return { start_quiz, end_quiz };
+  start_quiz: () => {
+    player.start();
+    display.start();
+  },
+
+  end_quiz: ({ winner, score }) => {
+    if(winner) {
+      player.win();
+      display.win(winner, score);
+    } else {
+      player.winless();
+      display.winless();
+    }
+  }
 };

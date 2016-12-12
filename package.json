@@ -9,6 +9,9 @@
   "author": "EPSI-I5-Kaamelott",
   "license": "MIT",
   "dependencies": {
-    "socket.io": "^1.7.2"
+    "express": "^4.14.0",
+    "http": "^0.0.0",
+    "socket.io": "^1.7.2",
+    "socket.io-client": "^1.7.2"
   }
 }
