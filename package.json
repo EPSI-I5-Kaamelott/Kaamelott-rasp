@@ -8,10 +8,19 @@
   },
   "author": "EPSI-I5-Kaamelott",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha src/**/*.test.js",
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "express": "^4.14.0",
     "http": "^0.0.0",
     "socket.io": "^1.7.2",
     "socket.io-client": "^1.7.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6"
   }
 }

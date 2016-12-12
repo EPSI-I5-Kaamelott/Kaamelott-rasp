@@ -6,7 +6,8 @@ const port = process.env.PORT || 3000;
 
 const SERVER_URL = process.env.SERVER_URL || 'http://localhost:3001';
 
-require('./socket')(SERVER_URL);
+const handlers = require('./handlers');
+require('./socket')(SERVER_URL, handlers);
 
 server.listen(port, err => {
   if (err) {

@@ -2,7 +2,7 @@ const display = require('./helpers/display');
 const player = require('./helpers/player');
 
 module.exports = {
-  connect: () => {
+  connection: () => {
     console.log('Connected to the server.');
     player.connect();
     display.connect();
