@@ -1,5 +1,5 @@
 const http = require('http');
-
+const player = require('play-sound')( opts = {});
 const server = http.createServer();
 
 const port = process.env.PORT || 3000;
@@ -14,4 +14,8 @@ server.listen(port, err => {
     return console.log('something bad happened', err);
   }
   console.log(`server is listening on ${port}`);
+});
+
+player.play('node_modules/kaamelott-soundboard/sounds/ah_le_printemps_on_crame_des_mecs.mp3', err => {
+    if (err) throw err;
 });
