@@ -5,7 +5,7 @@ const scores_file = 'scores.json';
 let players_scores = load_scores_from_file(file) || {};
 
 function increase_score(scores, winner, score) {
-  let new_scores = { ...scores }
+  let new_scores = Object.assign({}, scores);
   if(scores[winner]) {
     const old_score = scores[winner];
     new_scores[winner] = old_score + score);
