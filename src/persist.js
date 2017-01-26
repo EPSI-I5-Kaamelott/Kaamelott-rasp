@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const scores_file = 'scores.json';
 
-let players_scores = load_scores_from_file(file) || {};
+let players_scores = load_scores_from_file(scores_file) || {};
 
 function increase_score(scores, winner, score) {
   let new_scores = Object.assign({}, scores);
@@ -26,7 +26,11 @@ function persist_to_file(file, scores) {
 }
 
 function load_scores_from_file(file) {
-  return require(file);
+  if(fs.existsSync(file)) {
+    return fs.readFileSync(file);
+  } else {
+    return null;
+  }
 }
 
 function update_score(winner, score) {
