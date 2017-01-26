@@ -4,7 +4,7 @@ const server = http.createServer();
 
 const port = process.env.PORT || 3000;
 
-const SERVER_URL = process.env.SERVER_URL || 'http://localhost:3001';
+const SERVER_URL = 'https://peaceful-temple-52219.herokuapp.com';
 
 const handlers = require('./handlers');
 require('./socket')(SERVER_URL, handlers);
@@ -16,6 +16,3 @@ server.listen(port, err => {
   console.log(`server is listening on ${port}`);
 });
 
-player.play('node_modules/kaamelott-soundboard/sounds/ah_le_printemps_on_crame_des_mecs.mp3', err => {
-    if (err) throw err;
-});

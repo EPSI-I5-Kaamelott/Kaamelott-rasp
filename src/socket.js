@@ -8,6 +8,7 @@ const actions = {
 
 module.exports = (SERVER_URL, handlers) => {
   const socket = socket_io.connect(SERVER_URL);
+  socket.on('*', () => console.log('receiving...'));
   for(let action in actions) {
     socket.on(action, handlers[action]);
   }
