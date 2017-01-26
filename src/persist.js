@@ -35,7 +35,7 @@ function load_scores_from_file(file) {
 
 function update_score(winner, score) {
   players_scores = increase_score(players_scores, winner, score);
-  persist_to_file(scores_file, player_score);
+  persist_to_file(scores_file, players_scores);
 }
 
 module.exports = { update_score };

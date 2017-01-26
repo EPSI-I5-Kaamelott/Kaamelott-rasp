@@ -1,5 +1,4 @@
 const http = require('http');
-const player = require('play-sound')( opts = {});
 const server = http.createServer();
 
 const port = process.env.PORT || 3000;
@@ -15,4 +14,3 @@ server.listen(port, err => {
   }
   console.log(`server is listening on ${port}`);
 });
-
