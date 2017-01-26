@@ -8,7 +8,7 @@ function increase_score(scores, winner, score) {
   let new_scores = Object.assign({}, scores);
   if(scores[winner]) {
     const old_score = scores[winner];
-    new_scores[winner] = old_score + score);
+    new_scores[winner] = old_score + score;
   } else {
     new_scores[winner] = score;
   }
