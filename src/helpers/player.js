@@ -4,7 +4,7 @@ const Random = require('random-js');
 const sounds_path = './node_modules/kaamelott-soundboard'; 
 
 const sound_connect = [];
-const sounds_path_start = [
+const sounds_start = [
     'en_garde_espece_de_vieille_pute_degarnie',
     'en_garde_ma_mignone',
 ];
@@ -18,23 +18,23 @@ const sounds_winless = [
 ];
 
 const get_random_sound = (songs = []) => {
-    if (!songs.isEmpty()) {
-       const index = Random.integer(0,songs.length);
-       return songs[index];
-    }
+  if (songs.length !== 0) {
+    const index = Random.integer(0,songs.length);
+    return songs[index];
+  }
 
-    return null;
-}
+  return null;
+};
 
 const play_sound = (sound) => {
-    player.play(`${sounds_path}/${sound}.mp3`, err => {
-        if(err) console.error(err);
-    });
-}
+  player.play(`${sounds_path}/${sound}.mp3`, err => {
+    if(err) console.error(err);
+  });
+};
 
 const play = (sounds) => {
-   play_sound(get_random_sound(sounds)); 
-}
+  play_sound(get_random_sound(sounds)); 
+};
 
 module.exports = {
   connect: () => {
@@ -42,7 +42,7 @@ module.exports = {
   },
 
   start: () => {
-    play(sound_start);
+    play(sounds_start);
   },
 
   win: (winner, score) => {
