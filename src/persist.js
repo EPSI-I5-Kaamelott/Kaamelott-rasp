@@ -16,6 +16,7 @@ function increase_score(scores, winner, score) {
 }
 
 function persist_to_file(file, scores) {
+  console.log('persist scores in file', file, '. Scores:', scores);
   fs.writeFile(file, JSON.stringify(scores, null, 4), err => {
     if(err) {
       console.log(err);
@@ -27,8 +28,10 @@ function persist_to_file(file, scores) {
 
 function load_scores_from_file(file) {
   if(fs.existsSync(file)) {
+    console.log('file found, load scores');
     return fs.readFileSync(file);
   } else {
+    console.log('file not found');
     return null;
   }
 }
