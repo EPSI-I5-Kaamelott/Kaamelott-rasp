@@ -34,6 +34,7 @@ const play_sound = (sound) => {
 };
 
 const play = (sounds) => {
+  console.log('trying to play a sound');
   play_sound(get_random_sound(sounds)); 
 };
 
@@ -43,6 +44,7 @@ module.exports = {
   },
 
   start: () => {
+    console.log('player called');
     play(sounds_start);
   },
 
