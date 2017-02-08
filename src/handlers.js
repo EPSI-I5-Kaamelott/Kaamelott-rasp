@@ -15,12 +15,12 @@ module.exports = {
     display.start();
   },
 
-  end_quiz: ({ winner, score }) => {
+  end_quiz: (result) => {
     console.log('end_quiz');
-    if(winner) {
+    if(result.user) {
       player.win();
-      display.win(winner, score);
-      persist.update_score(winner, score);
+      display.win(result.user, result.score);
+      persist.update_score(result.user, result.score);
     } else {
       player.winless();
       display.winless();

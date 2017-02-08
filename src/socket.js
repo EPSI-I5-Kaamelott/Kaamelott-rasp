@@ -8,11 +8,11 @@ const actions = {
 
 module.exports = (SERVER_URL, handlers) => {
   const socket = socket_io.connect(SERVER_URL);
-  socket.on('*', () => console.log('receiving...'));
+  socket.on('message', (socket) => console.log('receiving...', socket));
 
   socket.on(actions.CONNECTION, handlers.connection);
   socket.on(actions.START_QUIZ, handlers.start_quiz);
-  socket.on(actions.END_QUIZ, handlers.end_quiz);
+  socket.on(actions.END_QUIZ, (result) => handlers.end_quiz(result));
 
   return { socket, actions };
 };

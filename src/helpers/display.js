@@ -1,7 +1,7 @@
 const spawn = require('child_process').spawn;
 
 function write_to_screen(msg_first_line = '', msg_second_line = '') {
-  spawn('python', [msg_first_line, msg_second_line]);
+  spawn('python', ['prints.py',msg_first_line, msg_second_line]);
 }
 
 module.exports = {
