@@ -20,9 +20,9 @@ const sounds_winless = [
 const get_random_sound = (songs = []) => {
   console.log('sound list', songs);
   if (songs.length !== 0) {
-    const index = Random.integer(0,songs.length-1);
-    console.log('song selected', songs[index], 'index', index);
-    return songs[index];
+    const song_selected = songs[Math.floor(Math.random() * songs.length)];
+    console.log('song selected', song_selected);
+    return song_selected;
   }
 
   return null;
