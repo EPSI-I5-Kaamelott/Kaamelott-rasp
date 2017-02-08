@@ -29,7 +29,7 @@ function persist_to_file(file, scores) {
 function load_scores_from_file(file) {
   if(fs.existsSync(file)) {
     console.log('file found, load scores');
-    return fs.readFileSync(file);
+    return JSON.parse(fs.readFileSync(file));
   } else {
     console.log('file not found');
     return null;
