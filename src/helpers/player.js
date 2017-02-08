@@ -48,7 +48,8 @@ module.exports = {
     play(sounds_start);
   },
 
-  win: (winner, score) => {
+  win: () => {
+    console.log('player called');
     play(sounds_win);
   },
 
