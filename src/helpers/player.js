@@ -1,3 +1,4 @@
+const spawn = require('child_process').spawn;
 const player = require('play-sound')( opts = {} );
 const Random = require('random-js');
 
