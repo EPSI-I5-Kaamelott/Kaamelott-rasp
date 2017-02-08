@@ -27,6 +27,7 @@ const get_random_sound = (songs = []) => {
 };
 
 const play_sound = (sound) => {
+  console.log('playing', sound);
   player.play(`${sounds_path}/${sound}.mp3`, err => {
     if(err) console.error(err);
   });
