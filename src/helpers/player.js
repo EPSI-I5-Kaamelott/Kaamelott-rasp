@@ -2,7 +2,7 @@ const spawn = require('child_process').spawn;
 const player = require('play-sound')( opts = {} );
 const Random = require('random-js');
 
-const sounds_path = './node_modules/kaamelott-soundboard'; 
+const sounds_path = '../node_modules/kaamelott-soundboard/sounds'; 
 
 const sound_connect = [];
 const sounds_start = [
