@@ -6,7 +6,7 @@ module.exports = {
   connection: () => {
     console.log('Connected to the server.');
     player.connect();
-    display.connect();
+    display.connect(persist.top_player());
   },
 
   start_quiz: () => {

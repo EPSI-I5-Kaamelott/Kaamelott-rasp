@@ -41,4 +41,18 @@ function update_score(winner, score) {
   persist_to_file(scores_file, players_scores);
 }
 
-module.exports = { update_score };
+function top_player() {
+  let top_player, top_score = 0;
+  
+  for( player in players_scores ) {
+    
+    if(players_scores[player] > top_score) {
+      top_score = players_scores[player];
+      top_player = player+'->'+top_score+'pts';
+    }
+  }
+
+  return top_player;
+}
+
+module.exports = { update_score, top_player };

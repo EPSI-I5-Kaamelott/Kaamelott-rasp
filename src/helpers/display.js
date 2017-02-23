@@ -5,9 +5,9 @@ function write_to_screen(msg_first_line = '', msg_second_line = '') {
 }
 
 module.exports = {
-  connect: () => {
-    console.log('connect');
-    write_to_screen('Connected');
+  connect: (player) => {
+    console.log('connect', player);
+    write_to_screen('***Top player***', player);
   },
 
   start: () => {
